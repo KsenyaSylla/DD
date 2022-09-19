@@ -8,6 +8,23 @@
     <title>Ritail profail</title>
   </head>
   <body>
+    <header class="header">
+      <div class="logo">
+
+      </div>
+      <div class="search">
+
+      </div>
+      <div class="profile_name">
+
+      </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
     
   </body>
 </html>
