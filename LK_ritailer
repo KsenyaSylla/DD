@@ -8,23 +8,43 @@
     <title>Ritail profail</title>
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+  
+        </div>
+        <div class="search">
+  
+        </div>
+        <div class="profile_name">
+  
+        </div>
+      </header>
+  
+      <main>
+        <nav class="menu">
 
-      </div>
-      <div class="search">
+        </nav>
+        <div class="catalog">
+          <article class="cart">
+            <div class="cart_fil">
+              <div class="cart_image">
+                <img src="" alt="">
+              </div>
+              <h2 class="name_product"></h2>
+              <p class="about_product"></p>
+              <div class="actions_product"></div>
+            </div>
+          </article>
+        </div>
+        <div class="pages">
 
-      </div>
-      <div class="profile_name">
-
-      </div>
-    </header>
-    <main>
-
-    </main>
-    <footer>
-
-    </footer>
-    
+        </div>  
+      </main>
+      
+      <footer>
+  
+      </footer>
+    </div>    
   </body>
 </html>
