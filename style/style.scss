@@ -1,0 +1,88 @@
+$maxWidth: 1140px;
+$red: #FF665C;
+$beige: #E8E8E3;
+$green: #369685;
+$txt: #333333;
+$darkGrey: #94969A;
+$grey: #BDBDBD;
+$menuWidth: 50px;
+$articleWidth: 322px;
+//придумать более адаптивную ширину для карточки?
+$articleHight: 400px;
+$commonSpace: 20px;
+$littleSpace: 4px;
+$radius: 4px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Lato;
+}
+
+.container {
+    max-width: $maxWidth;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+//стили для header
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: $commonSpace*2;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    &__search{
+        display: flex;
+        width: $articleWidth;
+        border-bottom: 1px solid #D9D9D9;
+        align-items: flex-end;
+        &--logo{
+            padding-right: $littleSpace;
+        }
+        &--input{
+            border: none;
+            padding: $littleSpace;
+            width: $articleWidth;
+        }
+    }
+    &__profile{
+        display: flex;
+        align-items: flex-end;
+        &&--info{
+            padding-left: $littleSpace*3;
+        }
+    }
+}
+
+//стили для main, включая menu
+//заголовок
+.pageName {
+    display: flex;
+    justify-content: space-between;
+    padding-top: $commonSpace;
+    padding-bottom: $commonSpace;
+}
+//стили для menu
+
+//стили для карточки
+.cart {
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 8px;
+    &__fil {
+        padding-bottom: $commonSpace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        //justify-content:center;
+    }
+    &__actionsProduct {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
