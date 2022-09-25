@@ -60,6 +60,10 @@ body {
 }
 
 //стили для main, включая menu
+.main {
+    display: flex;
+}
+
 //заголовок
 .pageName {
     display: flex;
@@ -69,8 +73,11 @@ body {
 }
 //стили для menu
 
+
 //стили для карточки
 .cart {
+    width: $articleWidth;
+    height: $articleHight;
     border: 1px solid rgba(0, 0, 0, 0.23);
     border-radius: 8px;
     &__fil {
