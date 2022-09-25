@@ -206,8 +206,11 @@ legend {
   flex-wrap: wrap;
   padding-bottom: 48px;
 }
+.forms__infoCompany--column:not(:last-child) {
+  margin-bottom: 24px;
+}
 .forms__infoCompany:not(:last-child) {
-  padding-right: 80px;
+  margin-right: 80px;
 }
 .forms__inputForMain {
   height: 48px;
