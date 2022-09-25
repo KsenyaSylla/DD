@@ -1,4 +1,81 @@
-@import url(varsMixins.scss); 
+//@import url(varsMixins.scss); 
+//переменные и миксины
+$maxWidth: 1348px;
+$red: #FF665C;
+$beige: #E8E8E3;
+$green: #369685;
+$txt: #333333;
+$blackTxt: #121212;
+$darkGrey: #94969A;
+$grey: #BDBDBD;
+$menuWidth: 50px;
+$articleWidth: 322px;
+//придумать более адаптивную ширину для карточки?
+$articleHight: 400px;
+$commonSpace: 20px;
+$littleSpace: 4px;
+$radius: 4px;
+$inputHeight: 48px;
+
+@mixin center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+@mixin fontManrope {
+    font-family: 'Manrope';
+    font-style: normal;
+    color: $txt;
+}
+@mixin textBig {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+}
+@mixin  textNormal {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+}
+@mixin hover {
+    color: $green;
+    cursor: pointer;    
+}
+@mixin headingH1Font {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+}
+@mixin  textForInput {
+    color: $darkGrey;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+}
+@mixin inputForMain {
+    height: $inputHeight;
+    width: $articleWidth;
+    padding-left: $littleSpace*3;
+    display: flex;
+    align-items: center;
+    border: 1px solid $beige;
+    border-radius: $radius;
+}
+@mixin button {
+    background-color: $green;
+    padding: $littleSpace*4 $littleSpace*6 $littleSpace*4 $littleSpace*6;
+    border: none;
+    border-radius: $radius;
+    input {
+        background-color: $green;
+        color: #FFFFFF;
+        border: none;
+    }
+}
 
 * {
     margin: 0;
@@ -14,6 +91,14 @@ a {
 }
 a:hover {
     color: $green;
+}
+
+fieldset {
+    border: none;
+}
+legend {
+    padding-bottom: $littleSpace*2;
+    @include textForInput
 }
 
 .container {
@@ -68,14 +153,14 @@ a:hover {
         background-image: url(../img/img_main.png);
         background-repeat: no-repeat;
         background-position: right;
-        width: 100%;
+        max-width: $maxWidth;
         min-height: 602px;
-        border: 1px solid #000000;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        //box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     }
     &__position {
         max-width: $maxWidth/2;
         padding-left: 6%;
+        padding-top: 173px;
     }
     &__text {
         color: $beige;
@@ -96,11 +181,88 @@ a:hover {
 //стили для about
 
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-top: $commonSpace*2;
+    padding-bottom: $commonSpace*3;
+    @include center;
+    &__heading {
+        padding-bottom: $littleSpace*2;
+        @include headingH1Font
+    }
+    &__text {
+        width: 60%;
+        text-align: center;
+        @include textNormal
+    }
 }
 
+//стили для form
+.forms {    
+    padding-bottom: $commonSpace*3;
+    @include center;
+    &__heading {
+        @include headingH1Font
+    }
+    &__enter {
+        @include center
+    }
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 120%;
+        color: $blackTxt;
+    }
+    &__text--forInput {
+        @include textForInput
+    }
+    .enter{
+        padding-bottom: $commonSpace*1.5;
+        &__login {
+            @include inputForMain
+        }
+        &__password {
+            @include inputForMain
+        }
+    }
+    &__register {
+        padding-top: $commonSpace*3;
+    }
+    &__typeForm {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: $commonSpace*2;
+        .typeForm {
+            display: flex;
+            input {
+               margin-right: $littleSpace*3;
+               margin-left: $littleSpace*3; 
+            }
+        }
+        .typeCompany {
+            display: flex;
+            input {
+                margin-right: $littleSpace*3;
+                margin-left: $littleSpace*3;
+            }
+        }
+    }
+    &__infoCompany {
+        width: inherit;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-bottom: $inputHeight;
+    }
+    &__inputForMain {
+        @include inputForMain
+    }
+    &__button {
+        @include center;
+        &--register{
+            @include button
+        }
+        
+    }
+}
 //стили для main, включая menu
 .main {
     display: flex;
@@ -133,5 +295,11 @@ a:hover {
         display: flex;
         justify-content: space-between;
     }
+
+}
+
+.footer {
+    background-color: $grey;
+    padding-top: $commonSpace*4;
 
 }
