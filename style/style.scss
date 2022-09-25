@@ -1,6 +1,7 @@
 //@import url(varsMixins.scss); 
 //переменные и миксины
 $maxWidth: 1348px;
+$white: #FFFFFF;
 $red: #FF665C;
 $beige: #E8E8E3;
 $green: #369685;
@@ -72,7 +73,7 @@ $inputHeight: 48px;
     border-radius: $radius;
     input {
         background-color: $green;
-        color: #FFFFFF;
+        color: $white;
         border: none;
     }
 }
@@ -88,9 +89,6 @@ body {
 
 a {
     text-decoration: none;
-}
-a:hover {
-    color: $green;
 }
 
 fieldset {
@@ -248,16 +246,22 @@ legend {
     &__infoCompany {
         width: inherit;
         display: flex;
-        justify-content: space-around;
         flex-wrap: wrap;
         padding-bottom: $inputHeight;
+    }
+    &__infoCompany:not(:last-child) {
+        padding-right: $commonSpace*4;
     }
     &__inputForMain {
         @include inputForMain
     }
     &__button {
         @include center;
-        &--register{
+        &--enter {
+            padding-bottom: $commonSpace*3;
+            @include button
+        }
+        &--register {
             @include button
         }
         
@@ -301,5 +305,17 @@ legend {
 .footer {
     background-color: $grey;
     padding-top: $commonSpace*4;
-
+    padding-bottom: $commonSpace*7;
+    &__links {
+        color: $white;
+        display: flex;
+        justify-content: center;
+    }
+    &__links:not(:last-child) {
+        padding-right: $commonSpace*2;
+        border-right: 1px solid $white;
+    }
+    &__links:not(:first-child) {
+        padding-left: $commonSpace*2;
+    }
 }

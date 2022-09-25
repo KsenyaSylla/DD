@@ -12,10 +12,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #369685;
-}
-
 fieldset {
   border: none;
 }
@@ -207,9 +203,11 @@ legend {
 .forms__infoCompany {
   width: inherit;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   padding-bottom: 48px;
+}
+.forms__infoCompany:not(:last-child) {
+  padding-right: 80px;
 }
 .forms__inputForMain {
   height: 48px;
@@ -225,6 +223,18 @@ legend {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.forms__button--enter {
+  padding-bottom: 60px;
+  background-color: #369685;
+  padding: 16px 24px 16px 24px;
+  border: none;
+  border-radius: 4px;
+}
+.forms__button--enter input {
+  background-color: #369685;
+  color: #FFFFFF;
+  border: none;
 }
 .forms__button--register {
   background-color: #369685;
@@ -269,4 +279,17 @@ legend {
 .footer {
   background-color: #BDBDBD;
   padding-top: 80px;
+  padding-bottom: 140px;
+}
+.footer__links {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+.footer__links:not(:last-child) {
+  padding-right: 40px;
+  border-right: 1px solid #FFFFFF;
+}
+.footer__links:not(:first-child) {
+  padding-left: 40px;
 }/*# sourceMappingURL=style.css.map */
