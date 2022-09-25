@@ -1,0 +1,37 @@
+$maxWidth: 1348px;
+$red: #FF665C;
+$beige: #E8E8E3;
+$green: #369685;
+$txt: #333333;
+$darkGrey: #94969A;
+$grey: #BDBDBD;
+$menuWidth: 50px;
+$articleWidth: 322px;
+//придумать более адаптивную ширину для карточки?
+$articleHight: 400px;
+$commonSpace: 20px;
+$littleSpace: 4px;
+$radius: 4px;
+
+//шрифты
+@mixin fontManrope {
+    font-family: 'Manrope';
+    font-style: normal;
+    color: $txt;
+}
+@mixin textBig{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+}
+@mixin hover {
+    color: $green;
+    cursor: pointer;    
+}
+@mixin headingH1Font {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+}

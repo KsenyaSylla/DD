@@ -1,17 +1,4 @@
-$maxWidth: 1140px;
-$red: #FF665C;
-$beige: #E8E8E3;
-$green: #369685;
-$txt: #333333;
-$darkGrey: #94969A;
-$grey: #BDBDBD;
-$menuWidth: 50px;
-$articleWidth: 322px;
-//придумать более адаптивную ширину для карточки?
-$articleHight: 400px;
-$commonSpace: 20px;
-$littleSpace: 4px;
-$radius: 4px;
+@import url(varsMixins.scss); 
 
 * {
     margin: 0;
@@ -20,6 +7,13 @@ $radius: 4px;
 }
 body {
     font-family: Lato;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: $green;
 }
 
 .container {
@@ -52,11 +46,59 @@ body {
     }
     &__profile{
         display: flex;
-        align-items: flex-end;
-        &&--info{
+        align-items: center;
+        &--info{
             padding-left: $littleSpace*3;
         }
+        &--enter{
+            padding-right: $littleSpace*3;
+            border-right: 1px solid $txt;
+            @include fontManrope
+        }
+        &--register{
+            padding-left: $littleSpace*3;
+            @include fontManrope
+        }
     }
+}
+
+//стили для intro
+.intro {
+    &__background {
+        background-image: url(../img/img_main.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        width: 100%;
+        min-height: 602px;
+        border: 1px solid #000000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &__position {
+        max-width: $maxWidth/2;
+        padding-left: 6%;
+    }
+    &__text {
+        color: $beige;
+        text-align: left;
+        &--big {
+            padding-bottom: 53px;
+            @include textBig
+        }
+        &--small {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 150%;
+        }
+    }
+}
+
+//стили для about
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 //стили для main, включая menu

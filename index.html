@@ -8,6 +8,7 @@
     <title>Ritail profail</title>
   </head>
   <body>
+    <p>Эта ссылка нужна для перехода на <a href="retail_profile_OK.html">Личный кабинет производителя</a></p>
     <div class="container">
       <header class="header">
         <div class="header__logo">
@@ -48,14 +49,133 @@
             </svg>
           </div>
           <div class="header__profile--info">
-            <p class="header__profile--enter">Вход</p>
-            <p class="header__profile--register">Регистрация</p>
+            <a class="header__profile--enter" href="#enter">Вход</a>
+            <a class="header__profile--register" href="#register">Регистрация</a>
           </div>          
         </div>
       </header>
       <main>
-        <a href="retail_profile_OK.html">Личный кабинет производителя</a>
+        <section class="intro">
+            <div class="intro__background">
+                <div class="intro__position">
+                    <div class="intro__text">
+                        <p class="intro__text--big">
+                            Создайте свой каталог с помощью виртуальной реальности
+                        </p>
+                        <p class="intro__text--small">Инвентаризация не требуется, мы легко соберем
+                            его из 3D моделей</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <h1 class="about__heading">Digital Diamonds</h1>
+            <p class="about__text">Небольшой текст о компании, описание преимуществ и возможностей блаблабла.
+                Несколько предложений – текст о компании, описание преимуществ и возможностей
+                платформы блаблабла. Небольшой текст о компании, описание преимуществ и
+                возможностей платформы блаблабла.</p>
+        </section>
+        <section class="forms">
+            <h2 class="forms__heading"> <a name="enter">Вход</a></h2>
+            <form action="#" class="forms__enter">
+                <fieldset class="enter forms__text--forInput">
+                    <legend>Логин</legend>
+                    <input type="text" class="enter__login" placeholder="Login">
+                </fieldset>
+                <fieldset class="enter forms__text--forInput"><legend>Пароль</legend>
+                    <input type="password" class="enter__password" placeholder="..........">
+                </fieldset>
+                <button class="forms__button forms__button--enter">
+                    <input type="submit" value="Войти">
+                </button>
+            </form>
+            <h2 class="forms__heading"> <a name="register">Регистрация</a></h2>
+            <form action="#" class="forms__register">
+                <div class="forms__typeForm">
+                    <div class="typeForm">
+                        <label for="legalForm" class="forms__text--forInput">Организационно-правовая форма</label>
+                        <input type="radio" name="legalForm" id="#"><span class="forms__text">ООО</span>
+                        <input type="radio" name="legalForm" id="#"><span class="forms__text">ИП</span>
+                    </div>
+                    <div class="typeCompany">
+                        <label for="typeCompany"class="forms__text--forInput">Тип компании</label>
+                        <input type="radio" name="typeCompany"><span class="forms__text">Ритейлер</span>
+                        <input type="radio" name="typeCompany"><span class="forms__text">Производитель</span>
+                    </div>
+                </div>
+                <div class="forms__infoCompany">
+                    <div class="forms__infoCompany--column">
+                        <fieldset class="infoCompany--name forms__text--forInput">
+                            <legend>Полное название организации (без кавычек)</legend>
+                            <input type="text" class="infoCompany--name">
+                        </fieldset>
+                        <fieldset class="infoCompany--INN forms__text--forInput">
+                            <legend>ИНН</legend>
+                            <input type="text" class="infoCompany--INN">
+                        </fieldset>
+                        <fieldset class="infoCompany--countBill forms__text--forInput">
+                            <legend>Расчетный счет</legend>
+                            <input type="text" class="infoCompany--countBill">
+                        </fieldset>
+                        <fieldset class="infoCompany--email forms__text--forInput">
+                            <legend>Электронная почта</legend>
+                            <input type="email" class="infoCompany--email">
+                        </fieldset>
+                    </div>
+                    <div class="forms__infoCompany--column">
+                        <fieldset class="infoCompany--adress forms__text--forInput">
+                            <legend>Юридический адрес</legend>
+                            <input type="text" class="infoCompany--adress">
+                        </fieldset>
+                        <fieldset class="infoCompany--KPP forms__text--forInput">
+                            <legend>КПП</legend>
+                            <input type="text" class="infoCompany--KPP">
+                        </fieldset>
+                        <fieldset class="infoCompany--corBill forms__text--forInput">
+                            <legend>Корреспондентский счет</legend>
+                            <input type="text" class="infoCompany--corBill">
+                        </fieldset>
+                        <fieldset class="infoCompany--mobPhone forms__text--forInput">
+                            <legend>Мобильный телефон</legend>
+                            <input type="text" class="infoCompany--mobPhone">
+                        </fieldset>
+                    </div>
+                    <div class="forms__infoCompany--column">
+                        <fieldset class="infoCompany--OGRN forms__text--forInput">
+                            <legend>ОГРН</legend>
+                            <input type="text" class="infoCompany--OGRN">
+                        </fieldset>
+                        <fieldset class="infoCompany--bank forms__text--forInput">
+                            <legend>Банк</legend>
+                            <input type="text" class="infoCompany--bank">
+                        </fieldset>
+                        <fieldset class="infoCompany--BIK forms__text--forInput">
+                            <legend>БИК</legend>
+                            <input type="text" class="infoCompany--BIK">
+                        </fieldset>
+                        <fieldset class="infoCompany--person forms__text--forInput">
+                            <legend>Контактное лицо</legend>
+                            <input type="text" class="infoCompany--person">
+                        </fieldset>
+                    </div>
+                </div>
+                <button class="forms__button forms__button--register">
+                    <input type="submit" value="Отправить заявку">
+                </button>
+            </form>
+        </section>
       </main>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__links">
+                <a href="#" class="footer__links link__about">О нас</a>
+                <a href="#enter" class="footer__links link__enter">Вход</a>
+                <a href="#register" class="footer__links link__register">Регистрация</a>
+                <a href="#" class="footer__links link__company">Реквизиты компании</a>
+                <a href="#" class="footer__links link__contacts">Контакты</a>
+            </div>
+        </div>
+    </footer>
   </body>
-</html>Константин Константинопольский
+</html>
