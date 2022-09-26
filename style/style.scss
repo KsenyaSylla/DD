@@ -248,12 +248,12 @@ legend {
         display: flex;
         flex-wrap: wrap;
         padding-bottom: $inputHeight;
-        &--column:not(:last-child) {
-            margin-bottom: calc($inputHeight/2);
+        &--column fieldset:not(:last-child){
+            padding-bottom: calc($inputHeight/2);
         }
-    }
-    &__infoCompany:not(:last-child) {
-        margin-right: $commonSpace*4;
+        &--column:not(:last-child) {
+            margin-right: $commonSpace*4;
+        }
     }
     &__inputForMain {
         @include inputForMain

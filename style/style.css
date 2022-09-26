@@ -206,10 +206,10 @@ legend {
   flex-wrap: wrap;
   padding-bottom: 48px;
 }
-.forms__infoCompany--column:not(:last-child) {
-  margin-bottom: 24px;
+.forms__infoCompany--column fieldset:not(:last-child) {
+  padding-bottom: 24px;
 }
-.forms__infoCompany:not(:last-child) {
+.forms__infoCompany--column:not(:last-child) {
   margin-right: 80px;
 }
 .forms__inputForMain {
