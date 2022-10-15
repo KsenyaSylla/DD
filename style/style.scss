@@ -243,6 +243,10 @@ legend {
             }
         }
     }
+//    &__spacing--right {
+//        margin-right: 4%;
+//    }
+
     &__infoCompany {
         width: inherit;
         display: flex;
@@ -252,9 +256,9 @@ legend {
             padding-bottom: calc($inputHeight/2);
         }
  // стили, которые не читает github pages       
- //       &--column:not(:last-child) {
- //           margin-right: $commonSpace*4;
- //       }
+        &--column:not(:last-child) {
+           margin-right: calc($commonSpace*4);
+        }
     }
     &__inputForMain {
         @include inputForMain
@@ -271,13 +275,6 @@ legend {
         
     }
 }
-
-.spacing {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;        
-}
-
 //стили для main, включая menu
 .main {
     display: flex;

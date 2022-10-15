@@ -209,6 +209,9 @@ legend {
 .forms__infoCompany--column fieldset:not(:last-child) {
   padding-bottom: 24px;
 }
+.forms__infoCompany--column:not(:last-child) {
+  margin-right: 80px;
+}
 .forms__inputForMain {
   height: 48px;
   width: 322px;
@@ -246,12 +249,6 @@ legend {
   background-color: #369685;
   color: #FFFFFF;
   border: none;
-}
-
-.spacing {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .main {
