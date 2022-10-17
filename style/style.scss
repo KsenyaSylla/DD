@@ -212,8 +212,11 @@ legend {
     &__text--forInput {
         @include textForInput
     }
+    &__spacing--right {
+        margin-right: 4%;
+    }
     .enter{
-        padding-bottom: $commonSpace*1.5;
+        padding-bottom: calc($commonSpace*1.5);
         &__login {
             @include inputForMain
         }
@@ -256,9 +259,9 @@ legend {
             padding-bottom: calc($inputHeight/2);
         }
  // стили, которые не читает github pages       
-        &--column:not(:last-child) {
-           margin-right: calc($commonSpace*4);
-        }
+ //       &--column:not(:last-child) {
+ //          margin-right: calc($commonSpace*4);
+ //       }
     }
     &__inputForMain {
         @include inputForMain
