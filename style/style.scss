@@ -213,7 +213,7 @@ legend {
         @include textForInput
     }
     &__spacing--right {
-        margin-right: 4%;
+        margin-right: 4vw;
     }
     .enter{
         padding-bottom: calc($commonSpace*1.5);
@@ -246,10 +246,6 @@ legend {
             }
         }
     }
-//    &__spacing--right {
-//        margin-right: 4%;
-//    }
-
     &__infoCompany {
         width: inherit;
         display: flex;

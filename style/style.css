@@ -157,6 +157,9 @@ legend {
   font-size: 14px;
   line-height: 120%;
 }
+.forms__spacing--right {
+  margin-right: 4vw;
+}
 .forms .enter {
   padding-bottom: 30px;
 }
@@ -208,9 +211,6 @@ legend {
 }
 .forms__infoCompany--column fieldset:not(:last-child) {
   padding-bottom: 24px;
-}
-.forms__infoCompany--column:not(:last-child) {
-  margin-right: 80px;
 }
 .forms__inputForMain {
   height: 48px;
